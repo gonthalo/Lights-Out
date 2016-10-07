@@ -104,6 +104,14 @@ function reset(){
 	draw();
 }
 
+function xing(){
+	document.getElementById('numero1').value = 4;
+	reset();
+	tablero[0][0] = true;
+	tablero[3][0] = true;
+	draw();
+}
+
 lienzo.addEventListener("click", function (e){
 	var x;
 	var y;
@@ -125,6 +133,7 @@ lienzo.addEventListener("click", function (e){
 }, false);
 
 reset();
+
 tablero[0][0] = false;
 tablero[3][0] = false;
 draw();
