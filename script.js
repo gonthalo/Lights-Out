@@ -85,6 +85,25 @@ function draw(){
 	}
 }
 
+function instrucciones(){
+	pluma.fillStyle = 'black';
+	pluma.font = '40px Times';
+	pluma.fillText('Mucha suerte ;)', 600 + ancho*size - 120, 350);
+	pluma.fillText('Para ganar el juego debe lograr', 500 + ancho*size - 120, 200);
+	pluma.fillText('que todas las luces sean', 500 + ancho*size - 120, 250);
+	pluma.fillStyle = rgbstr(color1);
+	pluma.fillText('verdes', 895 + ancho*size - 120, 250);
+}
+
+function reset(){
+	dimension = parseInt(document.getElementById('numero1').value);
+	tablero = generar(dimension);
+	pluma.fillStyle = 'white';
+	pluma.fillRect(0, 0, 1200, 600);
+	instrucciones();
+	draw();
+}
+
 lienzo.addEventListener("click", function (e){
 	var x;
 	var y;
@@ -105,16 +124,9 @@ lienzo.addEventListener("click", function (e){
 	draw();
 }, false);
 
-tablero = generar(4, true);
+reset();
 tablero[0][0] = false;
 tablero[3][0] = false;
-pluma.fillStyle = 'black';
-pluma.font = '40px Times';
-pluma.fillText('Mucha suerte ;)', 600, 350);
-pluma.fillText('Para ganar el juego debe lograr', 500, 200);
-pluma.fillText('que todas las luces sean', 500, 250);
-pluma.fillStyle = rgbstr(color1);
-pluma.fillText('verdes', 895, 250);
 draw();
 
 //window.setInterval(draw, 10);
