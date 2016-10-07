@@ -7,9 +7,18 @@
 	<div style="border:2px solid rgb(5,200,100)" float="left">
 		<canvas id="lienzo" width="1200px" height="600px" >Your browser does not render the HTML 5 canvas tag</canvas>
 	</div>
-	<!--<div>
-		<input type="button" onclick="draw()" value="Pausa"><input type="button" onclick="draw()" value="Reset"><input type="button" onclick="draw()" value="Mover"><input type="button" onclick="draw()" value="Borrar">Variaciones:<input type="button" onclick="method = 1" value="Conway"><input type="button" onclick="method = 2" value="Day and Night"><input type="button" onclick="method = 3" value="Highlife">Figuras:<input type="button" onclick="figura = 1" value="Punto"><input type="button" onclick="figura = 2" value="Planeador"><input type="button" onclick="figura = 3" value="Fila"><input type="button" onclick="figura = 4" value="Columna">
-	</div>-->
+	<div>
+		Tamaño del tablero:
+		<input type="number" min="2" max="8" id="numero1" value="4">
+		<input type="button" onclick="reset()" value="Reset">
+		<!--<input type="button" onclick="draw()" value="Conway">
+		<input type="button" onclick="method = 2" value="Day and Night">
+		<input type="button" onclick="method = 3" value="Highlife">
+		<input type="button" onclick="figura = 1" value="Punto">
+		<input type="button" onclick="figura = 2" value="Planeador">
+		<input type="button" onclick="figura = 3" value="Fila">
+		<input type="button" onclick="figura = 4" value="Columna">-->
+	</div>
 	<!--<div style="position:absolute; top: 300px; right: 200px; width:300px; height: 100px; border:2px solid rgb(5,200,100)">
 		<input type="radio" name="metodo" value="Conway" checked>
 		<br\>
